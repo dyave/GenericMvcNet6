@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using GenericMvcNet6.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<AdventureWorksLT2019Context>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("AdventureWorks"))
+    );
 
 var app = builder.Build();
 

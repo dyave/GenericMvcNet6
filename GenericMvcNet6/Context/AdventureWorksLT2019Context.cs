@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using GenericMvcNet6.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace GenericMvcNet6.Models
+namespace GenericMvcNet6.Context
 {
     public partial class AdventureWorksLT2019Context : DbContext
     {
